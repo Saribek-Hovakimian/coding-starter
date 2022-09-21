@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "eslint": "eslint --no-error-on-unmatched-pattern 'src/**/*.ts' 'src/**/*.tsx'"
   },
   "eslintConfig": {
