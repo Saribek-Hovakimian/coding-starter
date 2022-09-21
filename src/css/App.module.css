@@ -23,3 +23,15 @@
   height: 100px;
   width: 100px;
 }
+
+.adminLinkContainer {
+  margin: 40px 10px 10px 10px;
+}
+
+.button {
+  margin: 10px;
+}
+
+.button:hover {
+  cursor: pointer;
+}

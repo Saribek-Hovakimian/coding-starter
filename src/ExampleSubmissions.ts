@@ -8,15 +8,6 @@ export type Submission = {
   }[];
 };
 
-// Vote model
-// userId: string
-// submissionId: string
-// upVote: boolean
-
-// key value
-// votes
-// [votes]
-
 const EXAMPLE_SUBMISSIONS: Submission[] = JSON.parse(`
 [
   {

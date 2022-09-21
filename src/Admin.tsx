@@ -7,6 +7,9 @@ import { Vote } from "utils/local-storage/types";
 import setNumber from "utils/local-storage/setNumber";
 import getNumber from "utils/local-storage/getNumber";
 import SubmissionData from "components/SubmissionData";
+import { Link } from "react-router-dom";
+import styles from "./css/App.module.css";
+import setObject from "utils/local-storage/setObject";
 
 function Admin() {
   const [submissionNumber, setSubmissionNumber] = useState<number>(0);
@@ -78,6 +81,7 @@ function Admin() {
           />
           <hr />
           <button
+            className={styles.button}
             type="button"
             onClick={() => {
               setSubmissionNumber(submissionNumber - 1);
@@ -87,6 +91,7 @@ function Admin() {
             Back
           </button>
           <button
+            className={styles.button}
             type="button"
             onClick={() => {
               setSubmissionNumber(submissionNumber + 1);
@@ -95,6 +100,21 @@ function Admin() {
           >
             Next
           </button>
+
+          <button
+            className={styles.button}
+            type="button"
+            onClick={() => {
+              setAllVotes([]);
+              setObject("votes", { vArray: [] });
+            }}
+          >
+            Reset all votes
+          </button>
+
+          <div className={styles.adminLinkContainer}>
+            <Link to="/">Go to User Page</Link>
+          </div>
         </>
       )}
     </Layout>
